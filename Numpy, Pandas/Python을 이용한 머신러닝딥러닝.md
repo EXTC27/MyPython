@@ -151,3 +151,52 @@
 
      
 
+##### 6.numpy 자료형
+
+- int, float, bool
+
+1. 정수형(integer)
+
+   - int8, int16, int32, int64 (signed)
+   - uint (unsigned integer) : uint8(0~255), unit16(0~65535), uint32, uint64
+
+   
+
+2. 실수형(float)
+
+   - float16, float32, float64
+   - complex
+     - complex64 : 두개의 32bit 부동소수점으로 표시되는 복소수
+     - complex128 : 두개의 64bit 부동소수점으로 표시되는 복소수
+
+   
+
+##### 7.numpy 브로드캐스
+
+- 소스코드 참고 `ch5.py`
+
+
+
+---
+
+#### *Pandas
+
+- 데이터 분석 기능을 제공하는 라이브러리, CSV파일 등의 데이터를 읽고 원하는 데이터 형식으로 변환해줌
+
+
+
+- pandas 자료구조: `Series`, `DataFrame`
+  
+  - `Series` : 일차원 배열 같은 자료구조, `dictionary` 구조와 비슷하다.
+  
+    - Series 객체와 Series의 인덱스는 모두 name이라는 속성이 있다.
+    - 사용법은 소스코드 참고 `ch6.py`
+  
+    
+  
+  - `DataFrame` : 2차원 배열 같은 자료구조, R언어 data.frame과 비슷하다.
+  
+    - `ix`: row의 위치에 접근할 때 사용하는 메서드이지만, **최신버전에서는 지원이 안되는 거 같다.**
+    - `loc`: 라벨 값을 통해서 row의 위치에 접근할 때 사용하는 메서드
+    - `iloc`: 정수
+
