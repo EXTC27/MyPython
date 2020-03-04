@@ -350,3 +350,50 @@
 - 누락된 데이터 처리
   - pandas에서는 누락된 데이터를 모두 NaN으로 취급한다.
   - NaN의 값은 파이썬의 None값 NA와 같은 값으로 취급된다.
+
+
+
+- 누락된 데이터 골라내기
+
+  - `dropna()` 메서드를 이용
+
+    - Series 객체를 리턴한다.
+      
+
+  - DataFrame에서 누락된 데이터 골라내기
+
+    - dropna는 기본적으로 NA값이 하나라도 있는 row는 제외시킨다.
+    - `how='all'` 옵션을 주면 모든 값이 NA인 row만 제외된다.
+    - `how='all', axis=1` 모든 값이 NA인 column만 제외된다.
+    - `thresh` 옵션은 몇 개의 value가 들어있는 행을 가져오고 싶을 경우 사용한다.
+
+    
+
+  - 누락된 값 채우기
+
+    - 데이터 프레임에서는 누락된 데이터를 완벽하게 골라낼 수 가 없으므로 다른 데이터도 함께 버려지게 된다. 이런 경우에는 `fillna()` 메서드를 활용해서 비어있는 구멍을 채워주면 데이터의 손실을 막을 수 있다.
+
+      >ex)
+      >
+      >dataFrame.fillna(0)
+
+    - 활용에 따라 각 column마다 다른 값을 채워넣을 수 있다.
+
+      >ex)
+      >
+      >dataFrame.fillna({1:10, 3:30})
+
+    - 보간
+
+      >ex)
+      >
+      >dataFrame.fillna(method='ffill')
+      >
+      >dataFrame.fillna(method='ffill', limit=1) 하나만 보간
+
+    - 평균값으로 채우기
+
+      >ex)
+      >
+      >dataFrame.fillna(dataFrame.mean())
+
