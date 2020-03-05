@@ -402,3 +402,32 @@
 ##### 9.다중 색인(multi index)
 
 - 색인의 계층 : pandas의 중요 기능 중의 하나로 다중 색인 단계를 지정할 수 있다.
+
+
+
+- 인덱스 계층의 순서 바꾸기
+
+  - `swaplevel()` 메서드를 이용해서 바꾼다.
+
+    >ex)
+    >
+    >DataFrame.swaplevel('key1', 'key2') #key1과 key2를 바꾼다.
+
+    
+
+- 사전식으로 계층을 바꾸어서 정렬
+
+  - `sortlevel()` 메서드를 이용해서 정렬한다.
+
+    - 하지만, pandas 0.20.0 버전부터 `sort_index()`로 대체한다.
+
+    >ex)
+    >
+    >DataFrame.sort_index(0)
+
+
+
+- `set_index()` 메서드는 하나 이상의 column을 인덱스로 하는 새로운 DataFrame을 생성
+
+- reset_index() 메서드는 set_index()와 반대되는 개념의 메서드이다. 
+  인덱스를 column으로 하는 새로운 DataFrame을 생성한다.
