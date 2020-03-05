@@ -429,5 +429,5 @@
 
 - `set_index()` 메서드는 하나 이상의 column을 인덱스로 하는 새로운 DataFrame을 생성
 
-- reset_index() 메서드는 set_index()와 반대되는 개념의 메서드이다. 
+- `reset_index()` 메서드는 `set_index()`와 반대되는 개념의 메서드이다. 
   인덱스를 column으로 하는 새로운 DataFrame을 생성한다.
