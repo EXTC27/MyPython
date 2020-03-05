@@ -397,3 +397,8 @@
       >
       >dataFrame.fillna(dataFrame.mean())
 
+
+
+##### 9.다중 색인(multi index)
+
+- 색인의 계층 : pandas의 중요 기능 중의 하나로 다중 색인 단계를 지정할 수 있다.
